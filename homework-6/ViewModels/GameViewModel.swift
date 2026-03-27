@@ -138,14 +138,17 @@ class GameViewModel: ObservableObject {
         let animSteps = abs(newPosition - oldPosition)
         let direction = newPosition > oldPosition ? 1 : -1
 
-        for step in 1...animSteps {
-            let intermediatePos = oldPosition + step * direction
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15 * Double(step)) {
-                withAnimation(.easeInOut(duration: 0.12)) {
-                    self.players[playerIndex].position = intermediatePos
+        if animSteps > 0 {
+            for step in 1...animSteps {
+                let intermediatePos = oldPosition + step * direction
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.15 * Double(step)) {
+                    withAnimation(.easeInOut(duration: 0.12)) {
+                        self.players[playerIndex].position = intermediatePos
+                    }
                 }
             }
         }
+        
 
         // After movement animation, check for snake/ladder
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15 * Double(animSteps) + 0.2) {
