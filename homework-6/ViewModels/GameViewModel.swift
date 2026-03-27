@@ -291,7 +291,7 @@ class GameViewModel: ObservableObject {
         highlightedCells = []
 
         addLog(
-            playerName: "🎮",
+            playerName: "player",
             color: .green,
             message: String(localized: "log_game_started")
         )
