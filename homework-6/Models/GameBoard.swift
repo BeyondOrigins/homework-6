@@ -9,7 +9,7 @@ enum CellType: Codable, Equatable {
 }
 
 struct BoardCell: Identifiable, Codable, Equatable {
-    let id: Int          // 1...boardSize
+    let id: Int
     var cellType: CellType
 
     var destination: Int? {
@@ -25,7 +25,7 @@ struct BoardCell: Identifiable, Codable, Equatable {
 struct Player: Identifiable, Codable, Equatable {
     let id: Int
     var name: String
-    var position: Int       // 0 = not started, 1...100 on board
+    var position: Int
     var color: PlayerColor
 
     var isFinished: Bool { position >= 100 }
@@ -49,13 +49,12 @@ enum PlayerColor: String, Codable, CaseIterable, Equatable {
 // MARK: - Game Board
 
 struct GameBoard: Codable, Equatable {
-    let size: Int   // total cells (default 100)
-    let columns: Int // grid columns (default 10)
+    let size: Int
+    let columns: Int
     var cells: [BoardCell]
 
     var rows: Int { size / columns }
 
-    /// Generate a random board with snakes and ladders
     static func generate(
         size: Int = 100,
         columns: Int = 10,
@@ -64,7 +63,7 @@ struct GameBoard: Codable, Equatable {
     ) -> GameBoard {
         var cells = (1...size).map { BoardCell(id: $0, cellType: .normal) }
 
-        var usedPositions: Set<Int> = [1, size] // keep start/end clear
+        var usedPositions: Set<Int> = [1, size]
 
         // Place ladders (go UP: start in lower half, end in upper half)
         var placed = 0
@@ -79,7 +78,6 @@ struct GameBoard: Codable, Equatable {
             placed += 1
         }
 
-        // Place snakes (go DOWN: start in upper area, end in lower area)
         placed = 0
         while placed < snakeCount {
             let start = Int.random(in: 12...(size - 1))
@@ -95,8 +93,6 @@ struct GameBoard: Codable, Equatable {
         return GameBoard(size: size, columns: columns, cells: cells)
     }
 
-    /// Convert cell number (1-based) to grid row/col for rendering
-    /// Board is rendered bottom-to-top, with zigzag pattern
     func gridPosition(for cellNumber: Int) -> (row: Int, col: Int) {
         let index = cellNumber - 1
         let row = index / columns
@@ -106,7 +102,7 @@ struct GameBoard: Codable, Equatable {
         } else {
             col = columns - 1 - (index % columns)
         }
-        // Flip row so row 0 is at bottom
+        
         return (rows - 1 - row, col)
     }
 }
