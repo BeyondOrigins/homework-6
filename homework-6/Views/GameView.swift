@@ -113,11 +113,7 @@ struct GameView: View {
                             .foregroundColor(.white)
                             .padding(.horizontal, 32)
                             .padding(.vertical, 14)
-                            .background(
-                                viewModel.gameState == .waitingToRoll
-                                    ? LinearGradient(colors: [.orange, .red], startPoint: .leading, endPoint: .trailing)
-                                    : LinearGradient(colors: [.gray, .gray.opacity(0.6)], startPoint: .leading, endPoint: .trailing)
-                            )
+                            .background(viewModel.gameState == .waitingToRoll ? Color.orange : Color.gray.opacity(0.4))
                             .clipShape(RoundedRectangle(cornerRadius: 14))
                             .shadow(color: viewModel.gameState == .waitingToRoll ? .orange.opacity(0.4) : .clear, radius: 8, y: 4)
                     }

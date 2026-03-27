@@ -112,13 +112,7 @@ struct MainMenuView: View {
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
                             .padding(.vertical, 16)
-                            .background(
-                                LinearGradient(
-                                    colors: [.orange, .red],
-                                    startPoint: .leading,
-                                    endPoint: .trailing
-                                )
-                            )
+                            .background(Color.orange)
                             .clipShape(RoundedRectangle(cornerRadius: 16))
                             .shadow(color: .orange.opacity(0.4), radius: 12, y: 6)
                         }
