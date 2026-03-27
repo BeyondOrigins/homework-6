@@ -1,0 +1,49 @@
+/* Main Menu */
+"title_snakes_and_ladders" = "Змеи и Лестницы";
+"subtitle_classic_board_game" = "Классическая настольная игра";
+"label_number_of_players" = "Количество игроков";
+"placeholder_player_name %lld" = "Игрок %lld";
+"default_player_name %lld" = "Игрок %lld";
+"button_start_game" = "Начать игру";
+"button_history" = "История";
+"button_rules" = "Правила";
+
+/* Game */
+"label_turn %@" = "Ход: %@";
+"button_roll" = "Бросить 🎲";
+"label_game_over" = "Игра окончена!";
+"button_play_again" = "Играть снова";
+"button_menu" = "Меню";
+
+/* Log */
+"title_game_log" = "Журнал игры";
+"label_no_log" = "Ходов пока нет";
+"button_close" = "Закрыть";
+"log_game_started" = "Игра началась! Бросайте кубик!";
+"log_rolled %lld %lld %lld" = "Выпало %lld: ход с %lld на %lld";
+"log_bounce_back %lld" = "Выпало %lld, но отскок от 100!";
+"log_ladder %lld %lld" = "Поднялся по лестнице с %lld на %lld! 🪜";
+"log_snake %lld %lld" = "Укусила змея с %lld на %lld! 🐍";
+"log_finished %lld" = "Финишировал на месте #%lld! 🏆";
+
+/* History */
+"title_history" = "История игр";
+"label_no_history" = "Игр пока не было";
+"alert_clear_history" = "Очистить всю историю игр?";
+"button_cancel" = "Отмена";
+"button_clear" = "Очистить";
+
+/* Rules */
+"title_rules" = "Как играть";
+"rules_goal_title" = "Цель";
+"rules_goal_text" = "Первым добраться до клетки 100.";
+"rules_turns_title" = "Ходы";
+"rules_turns_text" = "Игроки по очереди бросают кубик (1-6) и продвигаются вперёд на выпавшее количество клеток.";
+"rules_ladders_title" = "Лестницы";
+"rules_ladders_text" = "Попадите на основание лестницы и поднимитесь на более высокую клетку!";
+"rules_snakes_title" = "Змеи";
+"rules_snakes_text" = "Попадите на голову змеи и скатитесь вниз на более низкую клетку!";
+"rules_winning_title" = "Победа";
+"rules_winning_text" = "Побеждает тот, кто первым доберётся до клетки 100. Игра продолжается, пока все игроки не финишируют.";
+"rules_bounce_title" = "Отскок";
+"rules_bounce_text" = "Если бросок переносит вас за клетку 100, вы отскакиваете назад на разницу.";

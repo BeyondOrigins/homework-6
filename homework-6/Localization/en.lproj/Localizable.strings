@@ -1,0 +1,49 @@
+/* Main Menu */
+"title_snakes_and_ladders" = "Snakes & Ladders";
+"subtitle_classic_board_game" = "Classic Board Game";
+"label_number_of_players" = "Number of Players";
+"placeholder_player_name %lld" = "Player %lld";
+"default_player_name %lld" = "Player %lld";
+"button_start_game" = "Start Game";
+"button_history" = "History";
+"button_rules" = "Rules";
+
+/* Game */
+"label_turn %@" = "%@'s Turn";
+"button_roll" = "Roll 🎲";
+"label_game_over" = "Game Over!";
+"button_play_again" = "Play Again";
+"button_menu" = "Menu";
+
+/* Log */
+"title_game_log" = "Game Log";
+"label_no_log" = "No moves yet";
+"button_close" = "Close";
+"log_game_started" = "Game started! Roll the dice!";
+"log_rolled %lld %lld %lld" = "Rolled %lld: moved from %lld to %lld";
+"log_bounce_back %lld" = "Rolled %lld but bounced back from 100!";
+"log_ladder %lld %lld" = "Climbed a ladder from %lld to %lld! 🪜";
+"log_snake %lld %lld" = "Bitten by a snake from %lld to %lld! 🐍";
+"log_finished %lld" = "Finished in position #%lld! 🏆";
+
+/* History */
+"title_history" = "Game History";
+"label_no_history" = "No games played yet";
+"alert_clear_history" = "Clear all game history?";
+"button_cancel" = "Cancel";
+"button_clear" = "Clear";
+
+/* Rules */
+"title_rules" = "How to Play";
+"rules_goal_title" = "Goal";
+"rules_goal_text" = "Be the first player to reach cell 100.";
+"rules_turns_title" = "Turns";
+"rules_turns_text" = "Players take turns rolling a die (1-6) and move forward by that many cells.";
+"rules_ladders_title" = "Ladders";
+"rules_ladders_text" = "Land on the bottom of a ladder and climb up to a higher cell!";
+"rules_snakes_title" = "Snakes";
+"rules_snakes_text" = "Land on a snake's head and slide down to a lower cell!";
+"rules_winning_title" = "Winning";
+"rules_winning_text" = "The first player to reach exactly cell 100 wins. The game continues until all players finish.";
+"rules_bounce_title" = "Bounce Back";
+"rules_bounce_text" = "If your roll takes you past 100, you bounce back by the excess amount.";
