@@ -53,8 +53,6 @@ class GameViewModel: ObservableObject {
         players.allSatisfy { $0.isFinished }
     }
 
-    // MARK: - Init
-
     init(playerNames: [String]) {
         self.board = GameBoard.generate()
         Dice.resetSeed()
@@ -171,7 +169,7 @@ class GameViewModel: ObservableObject {
                 color: players[playerIndex].color,
                 message: String(localized: "log_ladder \(position) \(dest)")
             )
-            // Animate climbing
+            // Animate climbing (this is so much better than hecking css)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
                     self.players[playerIndex].position = dest
@@ -250,8 +248,6 @@ class GameViewModel: ObservableObject {
         currentPlayerIndex = nextIndex
     }
 
-    // MARK: - Game Log
-
     private func addLog(playerName: String, color: PlayerColor, message: String) {
         let entry = GameLogEntry(playerName: playerName, playerColor: color, message: message)
         gameLog.insert(entry, at: 0)
@@ -268,7 +264,7 @@ class GameViewModel: ObservableObject {
                 name: player.name,
                 color: player.color.rawValue,
                 finishPosition: index + 1,
-                turns: 0  // simplified
+                turns: 0
             )
         }
 
