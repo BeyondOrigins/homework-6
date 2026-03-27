@@ -148,7 +148,6 @@ class GameViewModel: ObservableObject {
                 }
             }
         }
-        
 
         // After movement animation, check for snake/ladder
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15 * Double(animSteps) + 0.2) {
