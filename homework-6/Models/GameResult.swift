@@ -1,7 +1,5 @@
 import Foundation
 
-// MARK: - Game Result (for UserDefaults persistence)
-
 struct GameResult: Codable, Identifiable {
     let id: UUID
     let date: Date
@@ -15,8 +13,6 @@ struct GameResult: Codable, Identifiable {
         let turns: Int
     }
 }
-
-// MARK: - Results Storage
 
 class GameResultsStorage {
     private static let key = "game_results"

@@ -1,7 +1,5 @@
 import Foundation
 
-// MARK: - Dice
-
 struct Dice {
     private static var seed: UInt64 = UInt64(Date().timeIntervalSince1970 * 1000)
 

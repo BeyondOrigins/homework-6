@@ -1,7 +1,5 @@
 import SwiftUI
 
-// MARK: - Game View
-
 struct GameView: View {
     @ObservedObject var viewModel: GameViewModel
     @Environment(\.dismiss) private var dismiss
@@ -9,12 +7,10 @@ struct GameView: View {
 
     var body: some View {
         ZStack {
-            // Background
             Color(red: 0.08, green: 0.10, blue: 0.18)
                 .ignoresSafeArea()
 
             VStack(spacing: 0) {
-                // Top bar: current player info
                 topBar
                     .padding(.horizontal)
                     .padding(.top, 4)
@@ -28,7 +24,6 @@ struct GameView: View {
                 )
                 .padding(8)
 
-                // Dice & controls
                 bottomControls
                     .padding(.horizontal)
                     .padding(.bottom, 8)
