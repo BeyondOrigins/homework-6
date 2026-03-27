@@ -2,8 +2,6 @@ import Foundation
 import SwiftUI
 import Combine
 
-// MARK: - Game State
-
 enum GameState: Equatable {
     case waitingToRoll
     case rolling
@@ -11,8 +9,6 @@ enum GameState: Equatable {
     case snakeOrLadder
     case gameOver
 }
-
-// MARK: - Game Log Entry
 
 struct GameLogEntry: Identifiable {
     let id = UUID()
@@ -26,9 +22,6 @@ struct GameLogEntry: Identifiable {
 
 @MainActor
 class GameViewModel: ObservableObject {
-
-    // MARK: Published properties
-
     @Published var board: GameBoard
     @Published var players: [Player]
     @Published var currentPlayerIndex: Int = 0
